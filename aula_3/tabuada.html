@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar Tabuada</title>
+</head>
+<body>
+    <h2>Tabuada</h2>
+    <input type="number" id="txtnum" placeholder="Digite de 1 a 10">
+    <button id="gerar">Calcular</button>
+    <div id="resultado"></div>
+
+    <script>
+        let botao = document.querySelector("#gerar");
+        botao.addEventListener("click", gerarTabuada);
+
+        function gerarTabuada(){
+            let tnum = document.querySelector("#txtnum");
+            let resultado = document.querySelector("#resultado");
+
+            let n =  Number(tnum.value);
+            resultado.innerHTML = "";
+
+            // Laço de repetição
+            // for(inicialização, condição, passo(incremento ou decremento))
+
+            for(let i = 1; i <= 10; i++){
+                let total = n * i;
+                resultado.innerHTML += `${n} x ${i} = ${total}<br>`;
+            }
+        }
+
+    </script>
+
+</body>
+</html>
